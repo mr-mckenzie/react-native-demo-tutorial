@@ -61,9 +61,13 @@ export default function App() {
         }
       ></Button> */}
       {/* <StatusBar style="auto" /> */}
-      <View style={{ flex: 2, backgroundColor: "lightgreen" }} />
-      <View style={{ flex: 1, backgroundColor: "tomato" }} />
-      <View style={{ flex: 1, backgroundColor: "skyblue" }} />
+      <View style={{ width: 100, height: 100, backgroundColor: "gold" }} />
+      <View style={{ width: 100, height: 130, backgroundColor: "crimson" }} />
+      <View style={{ width: 100, height: 160, backgroundColor: "deeppink" }} />
+      <View style={{ width: 100, height: 190, backgroundColor: "turquoise" }} />
+      <View
+        style={{ width: 100, height: 220, backgroundColor: "greenyellow" }}
+      />
     </SafeAreaView>
   );
 }
@@ -71,9 +75,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white",
-    // alignItems: "center",
-    // justifyContent: "center",
+    flexDirection: "row", // the primary axis
+    justifyContent: "center", //applies to the primary axis
+    alignItems: "baseline", //applies to the secondary axis - each single line is aligned this way (in this case baseline aligned)
+    flexWrap: "wrap",
+    alignContent: "center", //applies to the content as a whole (all the content is centered)
+    backgroundColor: "darkorange",
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
   text: {
