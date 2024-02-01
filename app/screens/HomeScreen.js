@@ -26,9 +26,9 @@ function HomeScreen(props) {
         source={{
           width: "100%",
           height: "80%",
-          uri: `https://picsum.photos/${Math.trunc(
-            0.8 * dimensions.width
-          )}/${Math.trunc(dimensions.height)}`,
+          uri: `https://picsum.photos/${Math.trunc(dimensions.width)}/${
+            0.8 * Math.trunc(dimensions.height)
+          }`,
         }}
       />
       <View style={styles.logo}>
@@ -66,7 +66,6 @@ const styles = StyleSheet.create({
   button: {
     width: "100%",
     height: "10%",
-    backgroundColor: "red",
   },
   coral: {
     backgroundColor: "lightcoral",

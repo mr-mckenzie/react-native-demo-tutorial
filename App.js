@@ -14,6 +14,7 @@ import {
   Dimensions,
 } from "react-native";
 import HomeScreen from "./app/screens/HomeScreen";
+import ItemScreen from "./app/screens/ItemScreen";
 
 export default function App() {
   const handlePress = () => console.log("Text clicked!");
@@ -27,7 +28,8 @@ export default function App() {
   console.log("Orientation is " + orientation);
 
   return (
-    <HomeScreen></HomeScreen>
+    // <HomeScreen></HomeScreen>
+    <ItemScreen></ItemScreen>
     // <SafeAreaView style={styles.container}>
     //   <View
     //     style={{
