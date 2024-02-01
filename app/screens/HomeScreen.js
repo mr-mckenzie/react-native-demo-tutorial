@@ -9,7 +9,7 @@ import {
   Dimensions,
 } from "react-native";
 
-export default function Home() {
+function HomeScreen(props) {
   const handlePress = () => console.log("Text clicked!");
 
   dimensions = Dimensions.get("screen");
@@ -75,3 +75,5 @@ const styles = StyleSheet.create({
     backgroundColor: "darkturquoise",
   },
 });
+
+export default HomeScreen;

@@ -13,7 +13,7 @@ import {
   Platform,
   Dimensions,
 } from "react-native";
-import Home from "./Home";
+import HomeScreen from "./app/screens/HomeScreen";
 
 export default function App() {
   const handlePress = () => console.log("Text clicked!");
@@ -27,74 +27,52 @@ export default function App() {
   console.log("Orientation is " + orientation);
 
   return (
-    <View style={styles.container}>
-      <Image
-        source={{
-          width: "100%",
-          height: "80%",
-          uri: `https://picsum.photos/${Math.trunc(
-            0.8 * dimensions.width
-          )}/${Math.trunc(dimensions.height)}`,
-        }}
-      />
-      <View style={styles.logo}>
-        <Image
-          source={{
-            width: 125,
-            height: 125,
-            uri: "https://picsum.photos/300",
-          }}
-        />
-        <Text>Sell What You Don't Need</Text>
-      </View>
-
-      <View style={[styles.button, styles.coral]}></View>
-      <View style={[styles.button, styles.aqua]}></View>
-
-      {/* <View
-        style={{
-          width: orientation === "landscape" ? "100%" : "90%",
-          height: orientation === "landscape" ? "100%" : "30%",
-          backgroundColor: "darkorange",
-        }}
-      >
-        <Text style={styles.text}>ORANGE</Text>
-      </View> */}
-      {/* <TouchableOpacity onPress={() => console.log("Image tap!")}>
-        <Image
-          source={{
-            width: 400,
-            height: 400,
-            uri: "https://picsum.photos/401",
-          }}
-        />
-      </TouchableOpacity> */}
-      {/* <Image source={require('./assets/splash.png')}></Image> */}
-      {/* <Text numberOfLines={5} onPress={handlePress}>
-        Hello World!
-      </Text>
-      <Button
-        title="Do not press"
-        color={"darkorange"}
-        onPress={() =>
-          Alert.alert("WARNING!", "I told you not to press that...", [
-            { text: "Run away", onPress: () => console.log("You ran away.") },
-            {
-              text: "Do nothing",
-              onPress: () => console.log("You did nothing."),
-            },
-          ])
-        }
-      ></Button> */}
-      {/* <StatusBar style="auto" /> */}
-      {/* <View style={{ width: 100, height: 100, backgroundColor: "gold" }} />
-      <View style={{ width: 100, height: 130, backgroundColor: "crimson" }} />
-      <View style={{ width: 100, height: 160, backgroundColor: "deeppink" }} />
-      <View style={{ width: 100, height: 190, backgroundColor: "turquoise" }} />
-      <View
-        style={{ width: 100, height: 220, backgroundColor: "greenyellow" }}
-      /> */}
-    </View>
+    <HomeScreen></HomeScreen>
+    // <SafeAreaView style={styles.container}>
+    //   <View
+    //     style={{
+    //       width: orientation === "landscape" ? "100%" : "90%",
+    //       height: orientation === "landscape" ? "100%" : "30%",
+    //       backgroundColor: "darkorange",
+    //     }}
+    //   >
+    //     <Text style={styles.text}>ORANGE</Text>
+    //   </View>
+    //   <TouchableOpacity onPress={() => console.log("Image tap!")}>
+    //     <Image
+    //       source={{
+    //         width: 400,
+    //         height: 400,
+    //         uri: "https://picsum.photos/401",
+    //       }}
+    //     />
+    //   </TouchableOpacity>
+    //   <Image source={require('./assets/splash.png')}></Image>
+    //   <Text numberOfLines={5} onPress={handlePress}>
+    //     Hello World!
+    //   </Text>
+    //   <Button
+    //     title="Do not press"
+    //     color={"darkorange"}
+    //     onPress={() =>
+    //       Alert.alert("WARNING!", "I told you not to press that...", [
+    //         { text: "Run away", onPress: () => console.log("You ran away.") },
+    //         {
+    //           text: "Do nothing",
+    //           onPress: () => console.log("You did nothing."),
+    //         },
+    //       ])
+    //     }
+    //   ></Button>
+    //   <StatusBar style="auto" />
+    //   <View style={{ width: 100, height: 100, backgroundColor: "gold" }} />
+    //   <View style={{ width: 100, height: 130, backgroundColor: "crimson" }} />
+    //   <View style={{ width: 100, height: 160, backgroundColor: "deeppink" }} />
+    //   <View style={{ width: 100, height: 190, backgroundColor: "turquoise" }} />
+    //   <View
+    //     style={{ width: 100, height: 220, backgroundColor: "greenyellow" }}
+    //   />
+    // </SafeAreaView>
   );
 }
 
@@ -108,23 +86,5 @@ const styles = StyleSheet.create({
     alignContent: "center", //applies to the content as a whole (all the content is centered)
     backgroundColor: "grey",
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  },
-  logo: {
-    position: "absolute",
-    top: "10%",
-    flex: 1,
-    alignItems: "center",
-    alignSelf: "center",
-  },
-  button: {
-    width: "100%",
-    height: "10%",
-    backgroundColor: "red",
-  },
-  coral: {
-    backgroundColor: "lightcoral",
-  },
-  aqua: {
-    backgroundColor: "darkturquoise",
   },
 });
